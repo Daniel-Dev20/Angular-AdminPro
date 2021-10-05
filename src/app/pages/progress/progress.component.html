@@ -7,8 +7,8 @@
                     <div 
                         class="progress-bar bg-info progress-bar-striped active" 
                         style=" height:10px;"
-                        [style.width] =  'getPorcentaje'
                         role="progressbar"
+                        [style.width] =  'getPorcentaje'
                         
                         > 
                     
@@ -29,35 +29,14 @@
 
             <div class="card-body">
 
-                <div class="input-group">
+                <app-incrementador 
+                (valorSalida)="cambioValorHijo($event)" 
+                [btnClass]=" 'btn btn-info' "
+                [valor]='20'
+                >
 
-                    <span class="input-group-btn">
-                        <button 
-                        class="btn btn-primary" type="button"
-                        (click)="cambiarValor(-5)"
-                        >
-                            <i class="fa fa-minus"></i>
-                        </button>
-                    </span>
 
-                    <input 
-                    type="text" 
-                    class="form-control" 
-                    [(ngModel)]="progreso"
-                    placeholder="Progreso"
-                    >
-
-                    <span class="input-group-btn">
-                        <button 
-                        class="btn btn-primary" 
-                        type="button"
-                        (click)="cambiarValor(+5)"
-                        >
-                            <i class="fa fa-plus"></i>
-                        </button>
-                    </span>
-
-                </div>
+                </app-incrementador>
 
             </div>
 
