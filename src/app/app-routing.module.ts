@@ -11,7 +11,7 @@ const routes: Routes = [
   //path: '/auth', AuthRoutingModule
 
 
-  { path: '', redirectTo: '/dasboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 
   { path: '**', component: Page404Component }
 
